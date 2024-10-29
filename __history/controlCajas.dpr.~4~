@@ -1,0 +1,17 @@
+program controlCajas;
+
+uses
+  Vcl.Forms,
+  u_fMainCaja in 'u_fMainCaja.pas' {fMainCajas},
+  Vcl.Themes,
+  Vcl.Styles;
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Amethyst Kamri');
+  Application.CreateForm(TfMainCajas, fMainCajas);
+  Application.Run;
+end.

@@ -1,0 +1,14 @@
+program controlCajas;
+
+uses
+  Vcl.Forms,
+  u_fMainCaja in 'u_fMainCaja.pas' {fMainCajas};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfMainCajas, fMainCajas);
+  Application.Run;
+end.

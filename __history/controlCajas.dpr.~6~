@@ -1,0 +1,19 @@
+program controlCajas;
+
+uses
+  Vcl.Forms,
+  u_fMainCaja in 'u_fMainCaja.pas' {fMainCajas},
+  Vcl.Themes,
+  Vcl.Styles,
+  u_fRegistro in 'u_fRegistro.pas' {fRegistro};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  TStyleManager.TrySetStyle('Sky');
+  Application.CreateForm(TfMainCajas, fMainCajas);
+  Application.CreateForm(TfRegistro, fRegistro);
+  Application.Run;
+end.
